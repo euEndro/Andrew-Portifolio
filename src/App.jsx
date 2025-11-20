@@ -1,10 +1,13 @@
 
 import LiquidEther from "./components/LiquidEther.jsx";
 import GlassSurface from "./components/GlassSurface.jsx";
+import Navbar from "./components/Navbar.jsx";
+import About from "./components/About.jsx"; // Seção Sobre Mim
 
 export default function App() {
   return (
     <div className="w-full h-screen relative bg-background dark:bg-background font-sf-pro text-white overflow-hidden">
+      {/* Efeito de fundo */}
       <LiquidEther
         colors={["#00FF7F", "#66FFA1", "#B3FFD6"]}
         mouseForce={20}
@@ -23,15 +26,15 @@ export default function App() {
         autoRampDuration={0.6}
       />
 
-      <div className="absolute inset-0 flex flex-col items-center justify-center space-y-8 text-center z-10">
+      {/* Navbar */}
+      <Navbar />
 
-        {/* Cargo acima do nome */}
+      {/* Hero */}
+      <div className="absolute inset-0 flex flex-col items-center justify-center space-y-8 text-center z-10 px-4">
         <p className="text-xl text-gray-300 -mb-4">Desenvolvedor Backend & Mobile</p>
-
-        {/* NOME (texto normal) */}
         <h1 className="text-6xl font-bold">Andrew Doni</h1>
 
-        {/* Botões com GlassSurface (mesma largura, alinhados) */}
+        {/* Botões Projetos / Contate-me */}
         <div className="flex space-x-6 mt-6">
           <GlassSurface
             width={180}
@@ -62,9 +65,8 @@ export default function App() {
           </GlassSurface>
         </div>
 
-        {/* ÍCONES SOCIAIS abaixo dos botões */}
+        {/* Ícones sociais */}
         <div className="flex space-x-6 mt-6">
-          {/* GitHub */}
           <a
             href="https://github.com/euEndro"
             target="_blank"
@@ -83,7 +85,6 @@ export default function App() {
             </svg>
           </a>
 
-          {/* LinkedIn */}
           <a
             href="https://www.linkedin.com/in/andrew-doni"
             target="_blank"
@@ -103,6 +104,9 @@ export default function App() {
           </a>
         </div>
       </div>
+
+      {/* Seção Sobre Mim */}
+      <About />
     </div>
   );
 }
