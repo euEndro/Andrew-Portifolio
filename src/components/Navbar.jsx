@@ -9,12 +9,16 @@ export default function Navbar() {
   const [language, setLanguage] = useState("PT-BR");
 
   return (
-    <div className="absolute top-6 w-full flex justify-center z-20 px-4">
+    <div className="fixed top-6 w-full flex justify-center z-50 px-4">
       <GlassSurface
         width="90%"
         maxWidth={1200}
         height={60}
         borderRadius={40}
+        redOffset={1}
+        greenOffset={2}
+        blueOffset={3}
+        distortionScale={-200}
         opacity={0.18}
         brightness={55}
         mixBlendMode="screen"
@@ -23,7 +27,7 @@ export default function Navbar() {
         {/* Pilula da esquerda - Pesquisar */}
         <div className="w-28 h-10 font-extrabold rounded-full bg-white flex items-center justify-center">
           <span className="text-sm font-extrabold" style={{ color: "#000006" }}>
-            Pesquisar
+            doni.dev
           </span>
         </div>
 
