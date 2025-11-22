@@ -1,4 +1,7 @@
 
+import { useEffect } from "react";
+import Lenis from "@studio-freight/lenis";
+
 import ColorBends from "./components/ColorBends.jsx";
 import Navbar from "./components/Navbar.jsx";
 import Hero from "./components/Hero.jsx";
@@ -6,6 +9,29 @@ import About from "./components/About.jsx";
 import GradualBlur from "./components/GradualBlur.jsx";
 
 export default function App() {
+
+  // === SMOOTH SCROLL COM MOMENTUM ===
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.25,        // suavidade do movimento
+      smooth: true,
+      smoothTouch: true,
+      touchMultiplier: 2,
+      easing: (t) => 1 - Math.pow(1 - t, 3), // easing estilo Apple
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    return () => {
+      lenis.destroy();
+    };
+  }, []);
+
   return (
     <>
       {/* FUNDO FIXO que cobre a página toda */}
@@ -21,8 +47,8 @@ export default function App() {
       </div>
 
       {/* SEU SITE */}
-      <section className="relative h-screen overflow-hidden font-sf-pro text-white bg-transparent dark:bg-transparent">
-        <div className="h-full overflow-y-auto relative z-10 px-0 py-0">
+      <section className="relative min-h-screen font-sf-pro text-white bg-transparent dark:bg-transparent">
+        <div className="relative z-10 px-0 py-0">
           <Navbar />
           <Hero />
           <About />
@@ -31,7 +57,7 @@ export default function App() {
         <GradualBlur
           target="parent"
           position="bottom"
-          height="7rem"
+          height="6rem"
           strength={2}
           divCount={5}
           curve="bezier"

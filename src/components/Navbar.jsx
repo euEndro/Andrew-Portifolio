@@ -25,9 +25,9 @@ export default function Navbar() {
         className="relative flex items-center px-6"
       >
         {/* Pilula da esquerda - Pesquisar */}
-        <div className="w-28 h-10 font-extrabold rounded-full bg-white flex items-center justify-center">
+        <div className="w-24 h-10 font-extrabold rounded-full bg-white flex items-center justify-center">
           <span className="text-sm font-extrabold" style={{ color: "#000006" }}>
-            doni.dev
+            PDF
           </span>
         </div>
 

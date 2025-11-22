@@ -11,7 +11,7 @@ export default function About() {
         {/* Texto */}
         <div className="flex-1 text-center md:text-left">
           <h3 className="text-4xl font-bold mb-6">Quem sou eu?</h3>
-          <p className="text-lg text-gray-300 leading-relaxed mb-6">
+          <p className="text-lg text-white leading-relaxed mb-6">
             Olá! Eu sou o Andrew Doni, <b>desenvolvedor focado em Backend & Mobile. </b>
             Curioso por natureza, gosto de entender como as coisas funcionam e transformar ideias em aplicações limpas, eficientes e bem estruturadas.
             <br />
@@ -26,7 +26,7 @@ export default function About() {
         {/* Tilted Card com foto */}
         <div className="flex-1 flex justify-center">
           <TiltedCard
-            imageSrc="https://private-user-images.githubusercontent.com/235644612/517157569-c0e345ba-a39c-4ea9-9cb7-7169cad94631.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NjM2ODgzMzUsIm5iZiI6MTc2MzY4ODAzNSwicGF0aCI6Ii8yMzU2NDQ2MTIvNTE3MTU3NTY5LWMwZTM0NWJhLWEzOWMtNGVhOS05Y2I3LTcxNjljYWQ5NDYzMS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUxMTIxJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MTEyMVQwMTIwMzVaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT03ZjhhMWYwNDg4MjI0MDI2N2FhYTUwZWIzZjJhMDQ5MzlmYmE0OTI2ZjlhZDljYjEwZTFmMDEzMzM2YmVhNzc1JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.RCCzbWlHvcXG3kz1O1B6oUndzyEd5JEO4TArf-l5Fn0"
+            imageSrc="https://private-user-images.githubusercontent.com/235644612/517157569-c0e345ba-a39c-4ea9-9cb7-7169cad94631.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NjM4MzI4OTAsIm5iZiI6MTc2MzgzMjU5MCwicGF0aCI6Ii8yMzU2NDQ2MTIvNTE3MTU3NTY5LWMwZTM0NWJhLWEzOWMtNGVhOS05Y2I3LTcxNjljYWQ5NDYzMS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUxMTIyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MTEyMlQxNzI5NTBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0xN2M2N2Y3YjBmODA4N2NkMTc4OWRjMDNlODkwMjExZmJhZDI0M2QxYWI2MTNlYWJkNjQ3MTFmNDRiMTM0ZWRhJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.2MowlzGbyZSF9Q5ET4EnZS2Zz6vreoOUNafv4pzNKd0"
             altText="Andrew Doni"
             captionText="Andrew Doni"
             containerHeight="300px"

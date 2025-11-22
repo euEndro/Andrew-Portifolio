@@ -9,6 +9,8 @@ export default function Hero() {
 
       {/* Botões Projetos / Contate-me */}
       <div className="flex space-x-6 mt-6">
+        
+        {/* Botão Projetos */}
         <GlassSurface
           width={180}
           height={60}
@@ -16,13 +18,14 @@ export default function Hero() {
           opacity={0.18}
           brightness={55}
           mixBlendMode="screen"
-          className="flex items-center justify-center px-4 py-2 cursor-pointer transition-all"
+          className="group flex items-center justify-center px-4 py-2 cursor-pointer transition-all"
         >
-          <span className="text-lg font-medium transition-all duration-300 hover:scale-110 hover:font-bold">
+          <span className="text-lg font-medium transition-all duration-300 group-hover:scale-110 group-hover:font-bold">
             Projetos
           </span>
         </GlassSurface>
 
+        {/* Botão Contate-me */}
         <GlassSurface
           width={180}
           height={60}
@@ -30,9 +33,9 @@ export default function Hero() {
           opacity={0.18}
           brightness={55}
           mixBlendMode="screen"
-          className="flex items-center justify-center px-4 py-2 cursor-pointer transition-all"
+          className="group flex items-center justify-center px-4 py-2 cursor-pointer transition-all"
         >
-          <span className="text-lg font-medium transition-all duration-300 hover:scale-110 hover:font-bold">
+          <span className="text-lg font-medium transition-all duration-300 group-hover:scale-110 group-hover:font-bold">
             Contate-me
           </span>
         </GlassSurface>
