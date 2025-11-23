@@ -32,24 +32,22 @@ function Card({ item }) {
     >
       <div
         className="
-          w-[250px] h-[110px]
+          w-[200px] h-[90px]        /* menor tamanho */
           flex flex-col items-center justify-center
-          rounded-3xl
-          backdrop-blur-xl
+          rounded-3xl              /* borda um pouco menor */
+          backdrop-blur-lg
           bg-white/5
           border border-white/20
-          shadow-[0_4px_20px_rgba(0,0,0,0.22)]
-          hover:shadow-[0_6px_25px_rgba(0,0,0,0.32)]
+          shadow-[0_3px_15px_rgba(0,0,0,0.18)]
+          hover:shadow-[0_5px_20px_rgba(0,0,0,0.28)]
           transition-shadow
           relative overflow-hidden
         "
       >
-        {/* brilho vidro */}
         <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent pointer-events-none" />
 
-        {/* Ícone em branco usando mask */}
         <div
-          className="w-8 h-8 mb-2 relative z-10"
+          className="w-6 h-6 mb-1 relative z-10" /* ícone menor */
           style={{
             maskImage: `url(${item.logo})`,
             WebkitMaskImage: `url(${item.logo})`,
@@ -61,7 +59,7 @@ function Card({ item }) {
           }}
         />
 
-        <span className="text-white font-medium text-sm tracking-wide relative z-10">
+        <span className="text-white font-medium text-xs tracking-wide relative z-10">
           {item.name}
         </span>
       </div>
@@ -71,42 +69,40 @@ function Card({ item }) {
 
 export default function Skills() {
   return (
-    <section id="habilidades" className="w-full mt-20 text-white flex flex-col items-center">
-      <div className="max-w-6xl w-full px-6">
+    <section id="habilidades" className="w-full mt-16 text-white flex flex-col items-center">
+      <div className="max-w-6xl w-full px-4">
 
-        {/* ======= LINHA SUPERIOR — 3 QUADRADOS IGUAIS ======= */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16 text-center items-stretch">
-
+        {/* LINHA SUPERIOR — 3 QUADRADOS IGUAIS */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 text-center items-stretch">
           {["Linguagens", "Frameworks", "Bancos de Dados"].map((category) => (
             <div
               key={category}
               className="
                 bg-white/5 backdrop-blur-md border border-white/20
-                rounded-3xl p-6 flex flex-col justify-between
+                rounded-3xl p-4 flex flex-col justify-between
               "
             >
-              <h2 className="text-2xl font-bold mb-6 opacity-90">{category}</h2>
+              <h2 className="text-xl font-bold mb-4 opacity-90">{category}</h2>
 
-              <div className="flex flex-col items-center gap-4 mt-auto">
+              <div className="flex flex-col items-center gap-3 mt-auto">
                 {skills[category].map((item) => (
                   <Card key={item.name} item={item} />
                 ))}
               </div>
             </div>
           ))}
-
         </div>
 
-        {/* ======= LINHA INFERIOR — TECNOLOGIAS (CARD GRANDE) ======= */}
+        {/* LINHA INFERIOR — TECNOLOGIAS */}
         <div
           className="
             w-full bg-white/5 backdrop-blur-md border border-white/20
-            rounded-3xl p-8 mb-10
+            rounded-2xl p-6 mb-10
           "
         >
-          <h2 className="text-2xl font-bold mb-6 opacity-90 text-center">Tecnologias</h2>
+          <h2 className="text-xl font-bold mb-4 opacity-90 text-center">Tecnologias</h2>
 
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-wrap justify-center gap-3">
             {skills["Tecnologias"].map((item) => (
               <Card key={item.name} item={item} />
             ))}
@@ -114,6 +110,9 @@ export default function Skills() {
         </div>
 
       </div>
+
+      {/* TÍTULO DA PRÓXIMA SEÇÃO — PROJETOS */}
+      <h2 className="text-4xl font-bold mt-20 mb-4">Projetos</h2>
     </section>
   );
 }

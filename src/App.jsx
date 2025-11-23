@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar.jsx";
 import Hero from "./components/Hero.jsx";
 import About from "./components/About.jsx";
 import Skills from "./components/Skills.jsx";
+import Projects from "./components/Projects.jsx"
 import GradualBlur from "./components/GradualBlur.jsx";
 
 export default function App() {
@@ -56,7 +57,9 @@ export default function App() {
         <Navbar />
         <Hero />
         <About />
-        <Skills />   {/* 👈 Adicionado aqui */}
+        <Skills />   
+        <Projects />
+        <Skills />
 
         {/* BLUR NO FINAL DA PAGE */}
         <GradualBlur
