@@ -5,7 +5,7 @@ export default function About() {
   return (
     <section
       id="sobre-mim"
-      className="w-full py-32 text-white flex flex-col items-center"
+      className="w-full py-32 text-white flex flex-col items-center relative"
     >
       <div className="max-w-6xl px-6 flex flex-col md:flex-row items-center gap-12">
         
@@ -27,7 +27,7 @@ export default function About() {
         {/* Foto com Tilt */}
         <div className="flex-1 flex justify-center">
           <TiltedCard
-            imageSrc="https://private-user-images.githubusercontent.com/235644612/517157569-c0e345ba-a39c-4ea9-9cb7-7169cad94631.png?..."
+            imageSrc="https://private-user-images.githubusercontent.com/235644612/517157569-c0e345ba-a39c-4ea9-9cb7-7169cad94631.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NjM5MjMxMjAsIm5iZiI6MTc2MzkyMjgyMCwicGF0aCI6Ii8yMzU2NDQ2MTIvNTE3MTU3NTY5LWMwZTM0NWJhLWEzOWMtNGVhOS05Y2I3LTcxNjljYWQ5NDYzMS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUxMTIzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MTEyM1QxODMzNDBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0zODE4MGMyYWRmZTBiMjQ3Njg4NWY2NDBiMjdhNDViMTNjN2MyNGNkZGM5OTI2ZTRlOWUwOTE1NzUyOTM0YmEyJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.qiyjp5WaSH_q5ANfgKNHXpadnTGc5qq9WXbubPPG6Yk"
             altText="Andrew Doni"
             captionText="Andrew Doni"
             containerHeight="300px"
@@ -43,10 +43,11 @@ export default function About() {
         </div>
       </div>
 
-      {/* 🔥 TÍTULO INDICANDO A PRÓXIMA SEÇÃO */}
+      {/* 🔥 TÍTULO FIXO NO FIM DA SEÇÃO */}
       <h2
         className="
-          text-4xl font-bold mt-24 
+          text-4xl font-bold 
+          absolute bottom-6 left-1/2 -translate-x-1/2
         "
       >
         Habilidades Técnicas
