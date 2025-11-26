@@ -5,14 +5,18 @@ export default function About() {
   return (
     <section
       id="sobre-mim"
-      className="w-full py-32 text-white flex flex-col items-center relative"
+      className="w-full pb-[20vh] text-white flex flex-col items-center relative"
     >
+          <h2 className="text-4xl font-bold text-white mb-20">
+            Sobre Mim
+          </h2>
+
       <div className="max-w-6xl px-6 flex flex-col md:flex-row items-center gap-12">
         
         {/* Texto */}
         <div className="flex-1 text-center md:text-left">
-          <h3 className="text-4xl font-bold mb-6">Quem sou eu?</h3>
-          <p className="text-lg text-white leading-relaxed mb-6">
+          <h3 className="text-3xl font-bold mb-6">Quem sou eu?</h3>
+          <p className="text-base text-white leading-relaxed mb-6">
             Olá! Eu sou o Andrew Doni, <b>desenvolvedor focado em Backend & Mobile. </b>
             Curioso por natureza, gosto de entender como as coisas funcionam e transformar ideias em aplicações limpas, eficientes e bem estruturadas.
             <br />
@@ -43,15 +47,7 @@ export default function About() {
         </div>
       </div>
 
-      {/* 🔥 TÍTULO FIXO NO FIM DA SEÇÃO */}
-      <h2
-        className="
-          text-4xl font-bold 
-          absolute bottom-6 left-1/2 -translate-x-1/2
-        "
-      >
-        Habilidades Técnicas
-      </h2>
+
     </section>
   );
 }

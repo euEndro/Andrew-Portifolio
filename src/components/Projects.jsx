@@ -86,12 +86,14 @@ export default function Projects() {
     <section
       id="projetos"
       className="
-        w-full mt-25 text-white flex flex-col items-center
-        relative pb-60
+        w-full text-white flex flex-col items-center
+        pb-[20vh]
       "
     >
       
-      <p className="text-white text-lg max-w-3xl text-center mb-12">
+      <h2 className="text-4xl font-bold mb-5">Projetos</h2>
+
+      <p className="text-white text-lg max-w-3xl text-center mb-20">
         Todos os meus projetos são <b>Open Source</b>. Sinta-se à vontade para explorar o código e avaliar aspectos como organização, escalabilidade, clareza e arquitetura.
       </p>
 
@@ -102,14 +104,6 @@ export default function Projects() {
         ))}
       </div>
 
-      <h2
-        className="
-          text-5xl font-bold opacity-90
-          absolute bottom-6
-        "
-      >
-        Contate-me
-      </h2>
-    </section>
+          </section>
   );
 }

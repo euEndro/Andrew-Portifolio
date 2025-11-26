@@ -81,12 +81,7 @@ export default function Hero() {
           </svg>
         </a>
 
-        {/* Título "Sobre Mim" na parte inferior do Hero */}
-        <div className="absolute bottom-4 inset-x-0 flex justify-center">
-          <h2 className="text-5xl font-bold text-white">
-            Sobre Mim
-          </h2>
-        </div>
+        
       </div>
     </section>
   );

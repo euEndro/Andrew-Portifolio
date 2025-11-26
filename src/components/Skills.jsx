@@ -69,7 +69,17 @@ function Card({ item }) {
 
 export default function Skills() {
   return (
-    <section id="habilidades" className="w-full mt-16 text-white flex flex-col items-center">
+    <section id="habilidades" className="w-full pb-[20vh] text-white flex flex-col items-center">
+
+      <h2
+        className="
+          text-4xl font-bold 
+          mb-20
+        "
+      >
+        Habilidades Técnicas
+      </h2>
+
       <div className="max-w-6xl w-full px-4">
 
         {/* LINHA SUPERIOR — 3 QUADRADOS IGUAIS */}
@@ -112,8 +122,7 @@ export default function Skills() {
 
       </div>
 
-      {/* TÍTULO DA PRÓXIMA SEÇÃO — PROJETOS */}
-      <h2 className="text-4xl font-bold mt-20 mb-4">Projetos</h2>
+      
     </section>
   );
 }
