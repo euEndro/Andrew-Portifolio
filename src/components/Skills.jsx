@@ -73,7 +73,7 @@ export default function Skills() {
       <div className="max-w-6xl w-full px-4">
 
         {/* LINHA SUPERIOR — 3 QUADRADOS IGUAIS */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 text-center items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 text-center items-stretch max-w-[900px] mx-auto">
           {["Linguagens", "Frameworks", "Bancos de Dados"].map((category) => (
             <div
               key={category}
@@ -98,6 +98,7 @@ export default function Skills() {
           className="
             w-full bg-white/5 backdrop-blur-md border border-white/20
             rounded-2xl p-6 mb-10
+            max-w-[900px] mx-auto
           "
         >
           <h2 className="text-xl font-bold mb-4 opacity-90 text-center">Tecnologias</h2>
