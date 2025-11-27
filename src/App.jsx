@@ -3,16 +3,17 @@ import { useEffect } from "react";
 import Lenis from "@studio-freight/lenis";
 
 import ColorBends from "./components/ColorBends.jsx";
+import { LanguageProvider } from "./components/LanguageContext.jsx"
 import Navbar from "./components/Navbar.jsx";
 import Hero from "./components/Hero.jsx";
 import About from "./components/About.jsx";
 import Skills from "./components/Skills.jsx";
 import Projects from "./components/Projects.jsx"
+import Contact from "./components/Contact.jsx"
 import GradualBlur from "./components/GradualBlur.jsx";
 
 export default function App() {
 
-  // === SMOOTH SCROLL COM MOMENTUM ===
   useEffect(() => {
     const lenis = new Lenis({
       wrapper: window,                  
@@ -38,7 +39,6 @@ export default function App() {
 
   return (
     <>
-      {/* FUNDO FIXO */}
       <div className="fixed inset-0 w-full h-full -z-10 pointer-events-none">
         <ColorBends
           colors={[
@@ -51,17 +51,20 @@ export default function App() {
         />
       </div>
 
-      {/* CONTEÚDO DA PÁGINA */}
       <section className="relative min-h-screen font-sf-pro text-white bg-transparent dark:bg-transparent">
 
+        <LanguageProvider> 
         <Navbar />
         <Hero />
         <About />
         <Skills />   
         <Projects />
-        <Skills />
 
-        {/* BLUR NO FINAL DA PAGE */}
+        <div className="w-full max-w-[1110px] mx-auto px-8">
+          <Contact />
+        </div>
+        </LanguageProvider>
+
         <GradualBlur
           target="page"
           position="bottom"

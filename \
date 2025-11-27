@@ -1,0 +1,75 @@
+
+import React from "react";
+
+export default function Contact() {
+  return (
+    <section id="contato" className="w-full py-20 bg-transparent">
+      {/* container centralizado com largura máxima */}
+      <div className="max-w-[1250px] mx-auto ">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+          {/* Texto da esquerda */}
+          <div className="space-y-6">
+            <h2 className="text-4xl font-bold">Contate-me</h2>
+            <p className="text-lg leading-relaxed">
+              Caso queira entrar em contato, seja para oportunidades de serviço ou para solicitar uma solução personalizada,
+              preencha os campos à direita ou me envie uma mensagem diretamente.
+            </p>
+
+            <div className="pt-4">
+              <p className="text-lg font-semibold">Meu Email:</p>
+              <p className="text-lg">andrew.doni.assis2@gmail.com</p>
+            </div>
+          </div>
+
+          {/* Formulário da direita */}
+          <form
+            className="bg-white/5 backdrop-blur-sm border border-white/20 rounded-2xl p-6 space-y-4 shadow-xl"
+            action="https://formsubmit.co/andrew.doni.assis2@gmail.com"
+            method="POST"
+          >
+            {/* Anti-spam / template (opcional) */}
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="box" />
+
+            <div className="flex flex-col space-y-2">
+              <label className="text-sm">Seu email</label>
+              <input
+                type="email"
+                name="email"
+                required
+                className="p-3 rounded-xl bg-white/20 border border-white/30 focus:outline-none"
+              />
+            </div>
+
+            <div className="flex flex-col space-y-2">
+              <label className="text-sm">Assunto</label>
+              <input
+                type="text"
+                name="assunto"
+                required
+                className="p-3 rounded-xl bg-white/20 border border-white/30 focus:outline-none"
+              />
+            </div>
+
+            <div className="flex flex-col space-y-2">
+              <label className="text-sm">Conteúdo</label>
+              <textarea
+                name="mensagem"
+                required
+                rows="6"
+                className="p-3 rounded-xl bg-white/20 border border-white/30 focus:outline-none"
+              />
+            </div>
+
+            <button
+              type="submit"
+              className="w-full py-3 rounded-xl font-semibold backdrop-blur-lg bg-white/20 hover:bg-white/30 transition shadow-lg"
+            >
+              Enviar
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  );
+}

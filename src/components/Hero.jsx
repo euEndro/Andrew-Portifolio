@@ -2,15 +2,34 @@
 import GlassSurface from "./GlassSurface.jsx";
 
 export default function Hero() {
+
+  const scrollToSection = (id, offset = -150) => {
+  const el = document.getElementById(id);
+  if (!el) return;
+
+  try {
+    if (window.lenis && typeof window.lenis.scrollTo === "function") {
+      window.lenis.scrollTo(el, { offset });
+      return;
+    }
+  } catch {}
+
+  const top = el.getBoundingClientRect().top + window.scrollY + offset;
+  window.scrollTo({ top, behavior: "smooth" });
+};
+
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center space-y-8 text-center z-10 px-4 relative">
+    <section id="hero" className="min-h-screen flex flex-col items-center justify-center space-y-8 text-center z-10 px-4 relative">
       <p className="text-xl text-gray-300 -mb-4">Desenvolvedor Backend & Mobile</p>
       <h1 className="text-6xl font-bold">Andrew Doni</h1>
 
-      {/* Botões Projetos / Contate-me */}
       <div className="flex space-x-6 mt-6">
         
-        {/* Botão Projetos */}
+        <button
+          type="button"
+          onClick={() => scrollToSection("habilidades")}
+          className="group p-0 rounded-full focus:outline-none"
+        >
         <GlassSurface
           width={180}
           height={60}
@@ -21,11 +40,16 @@ export default function Hero() {
           className="group flex items-center justify-center px-4 py-2 cursor-pointer transition-all"
         >
           <span className="text-lg font-medium transition-all duration-300 group-hover:scale-110 group-hover:font-bold">
-            Projetos
+            Habilidades
           </span>
         </GlassSurface>
+        </button>
 
-        {/* Botão Contate-me */}
+        <button
+          type="button"
+          onClick={() => scrollToSection("contato")}
+          className="group p-0 rounded-full focus:outline-none"
+        >
         <GlassSurface
           width={180}
           height={60}
@@ -39,11 +63,10 @@ export default function Hero() {
             Contate-me
           </span>
         </GlassSurface>
+        </button>
       </div>
 
-      {/* Ícones sociais */}
       <div className="flex space-x-6 mt-6">
-        {/* GitHub */}
         <a
           href="https://github.com/euEndro"
           target="_blank"
@@ -62,7 +85,6 @@ export default function Hero() {
           </svg>
         </a>
 
-        {/* LinkedIn */}
         <a
           href="https://www.linkedin.com/in/andrew-doni"
           target="_blank"
