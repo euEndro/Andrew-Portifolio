@@ -1,8 +1,7 @@
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import GlassSurface from "./GlassSurface.jsx";
 
-// Mapeamento dos itens → respectivas sections
 const menuItems = [
   { label: "Apresentação", id: "hero" },
   { label: "Sobre Mim", id: "sobre-mim" },
@@ -14,16 +13,61 @@ const menuItems = [
 export default function Navbar() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [language, setLanguage] = useState("PT-BR");
+  const [isScrolling, setIsScrolling] = useState(false);
+  const scrollTimeout = useRef(null);
 
-  // === Função Scroll Global ===
+  const yOffset = -140;
+
   const scrollToSection = (id) => {
     const el = document.getElementById(id);
     if (el) {
-      const yOffset = -120; // ajuste fino da navbar
-      const y = el.getBoundingClientRect().top + window.scrollY + yOffset;
+      setIsScrolling(true);
+
+      const y =
+        el.getBoundingClientRect().top + window.scrollY + yOffset;
+
       window.scrollTo({ top: y, behavior: "smooth" });
     }
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Reinicia o timeout toda vez que ocorre scroll
+      if (scrollTimeout.current) clearTimeout(scrollTimeout.current);
+
+      // Após 150ms sem scroll → scroll acabou
+      scrollTimeout.current = setTimeout(() => {
+        setIsScrolling(false);
+      }, 150);
+
+      // Se estamos scrollando automaticamente → não atualizar activeIndex
+      if (isScrolling) return;
+
+      let currentIndex = 0;
+      let smallestDistance = Infinity;
+
+      menuItems.forEach((item, index) => {
+        const el = document.getElementById(item.id);
+        if (!el) return;
+
+        const distance = Math.abs(
+          el.getBoundingClientRect().top - Math.abs(yOffset)
+        );
+
+        if (distance < smallestDistance) {
+          smallestDistance = distance;
+          currentIndex = index;
+        }
+      });
+
+      setActiveIndex(currentIndex);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [isScrolling]);
 
   return (
     <div className="fixed top-6 w-full flex justify-center z-50 px-4">
@@ -41,14 +85,12 @@ export default function Navbar() {
         mixBlendMode="screen"
         className="relative flex items-center px-6"
       >
-        {/* Pilula da esquerda */}
         <div className="w-24 h-10 font-extrabold rounded-full bg-white flex items-center justify-center">
           <span className="text-sm font-extrabold" style={{ color: "#000006" }}>
             PDF
           </span>
         </div>
 
-        {/* Menu central */}
         <div className="flex-1 flex justify-center space-x-8">
           {menuItems.map((item, index) => {
             const isActive = index === activeIndex;
@@ -75,7 +117,6 @@ export default function Navbar() {
           })}
         </div>
 
-        {/* Pilula da direita - Idioma */}
         <div className="ml-auto">
           <button
             onClick={() => setLanguage(language === "PT-BR" ? "ENG" : "PT-BR")}
