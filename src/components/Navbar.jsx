@@ -97,14 +97,23 @@ export default function Navbar() {
           ? "Andrew-Doni-Resume.pdf"
           : "Curriculo-Andrew-Doni.pdf"
       }
-      className="w-24 h-10 font-extrabold rounded-full bg-white flex items-center justify-center duration-300 hover:scale-110 transition-all"
+      className="w-16 h-8 text-xs
+        md:w-24 md:h-10 md:text-sm 
+        font-extrabold rounded-full bg-white flex items-center justify-center
+        transition-all duration-300 hover:scale-110"
     >
       <span className="text-sm font-extrabold" style={{ color: "#000006" }}>
         PDF
       </span>
     </a>
 
-        <div className="flex-1 flex justify-center space-x-8">
+        <div className="flex-1 
+          flex 
+          justify-center 
+          space-x-3            /* menor espaçamento no mobile */
+          md:space-x-8         /* espaçamento original no desktop */
+          text-xs              /* texto menor no mobile */
+          md:text-base         /* tamanho normal no desktop */">
           {menuItems.map((item, index) => {
             const isActive = index === activeIndex;
 
@@ -115,7 +124,11 @@ export default function Navbar() {
                   setActiveIndex(index);
                   scrollToSection(item.id);
                 }}
-                className={`relative px-4 py-2 transition-all duration-300 ${
+                className={`relative
+                  px-2 py-1 text-xs
+                  md:px-4 md:py-2 md:text-base
+                  transition-all duration-300
+                  ${
                   isActive
                     ? "text-white font-bold scale-110"
                     : "text-white font-medium hover:scale-110 hover:font-bold"
@@ -133,7 +146,10 @@ export default function Navbar() {
         <div className="ml-auto">
           <button
             onClick={() => setLanguage(language === "PT-BR" ? "ENG" : "PT-BR")}
-            className="w-24 h-10 font-extrabold transition-all duration-300 hover:scale-110 rounded-full bg-white flex items-center justify-center"
+            className="w-16 h-8 text-xs
+              md:w-24 md:h-10 md:text-sm 
+              font-extrabold rounded-full bg-white flex items-center justify-center
+              transition-all duration-300 hover:scale-110"
           >
             <span className="text-sm font-extrabold" style={{ color: "#000006" }}>
               {language}
