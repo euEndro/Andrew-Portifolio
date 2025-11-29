@@ -1,22 +1,28 @@
 
+import { useT } from "./useT.js";
+
 export default function ContateMe() {
+  const t = useT();
+
   return (
     <section id="contato" className="pb-[20vh] w-full flex flex-col justify-center ">
       <h2 className="text-4xl font-bold text-center mb-20">
-        Contate-me
+        {t("contact_title")}
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+
         {/* Texto da esquerda */}
         <div className="space-y-6">
-          <h3 className="text-3xl font-bold">Como entrar em contato?</h3>
-          <p className="text-lg leading-relaxed">
-            Se você deseja falar comigo — seja para discutir oportunidades de trabalho, propostas de parceria, desenvolvimento de soluções personalizadas ou simplesmente trocar uma ideia sobre tecnologia — estou sempre aberto a conversas.<br /><br />
-            Fique à vontade para usar o formulário ao lado. Leia, escreva com calma e envie sua mensagem; ela chegará diretamente ao meu e-mail exatamente como for preenchida.
-          </p>
-      </div>
+          <h3 className="text-3xl font-bold">{t("contact_how_to")}</h3>
 
-        {/* Formulário da direita */}
+          <p className="text-lg leading-relaxed">
+            {t("contact_paragraph1")}<br /><br />
+            {t("contact_paragraph2")}
+          </p>
+        </div>
+
+        {/* Formulário */}
         <form
           className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-3xl p-6 space-y-4 shadow-xl"
           action="https://formsubmit.co/37a62063ad51ebbbdf4a44020697feb5"
@@ -27,7 +33,7 @@ export default function ContateMe() {
           <input type="hidden" name="_template" value="box" />
 
           <div className="flex flex-col space-y-2">
-            <label className="text-sm">Seu email</label>
+            <label className="text-base">{t("contact_email")}</label>
             <input
               type="email"
               name="email"
@@ -37,7 +43,7 @@ export default function ContateMe() {
           </div>
 
           <div className="flex flex-col space-y-2">
-            <label className="text-sm">Assunto</label>
+            <label className="text-base">{t("contact_subject")}</label>
             <input
               type="text"
               name="assunto"
@@ -47,7 +53,7 @@ export default function ContateMe() {
           </div>
 
           <div className="flex flex-col space-y-2">
-            <label className="text-sm">Conteúdo</label>
+            <label className="text-base">{t("contact_content")}</label>
             <textarea
               name="mensagem"
               required
@@ -60,8 +66,9 @@ export default function ContateMe() {
             type="submit"
             className="w-full py-3 rounded-full font-semibold backdrop-blur-lg bg-white/20 hover:bg-white/30 transition shadow-lg"
           >
-            Enviar
+            {t("contact_send")}
           </button>
+
         </form>
       </div>
     </section>

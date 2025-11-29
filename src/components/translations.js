@@ -11,16 +11,34 @@ export const texts = {
     // Hero
     hero_role: "Desenvolvedor Backend & Mobile",
     hero_name: "Andrew Doni",
+    hero_button1: "Habilidades",
+    hero_button2: "Contate-me",
 
     // About
     about_title: "Sobre Mim",
     about_who_am_i: "Quem sou eu?",
     about_paragraph1:
-      "Olá! Eu sou o Andrew Doni, desenvolvedor focado em Backend & Mobile. Curioso por natureza, gosto de entender como as coisas funcionam e transformar ideias em aplicações limpas, eficientes e bem estruturadas.",
+      "Olá! Eu sou o Andrew Doni, ",
+    about_paragraph1_1b:
+      "desenvolvedor focado em Backend & Mobile. ",
+    about_paragraph1_2:
+      "Curioso por natureza, gosto de entender como as coisas funcionam e transformar ideias em aplicações limpas, eficientes e bem estruturadas.",
     about_paragraph2:
-      "Estudo Spring Boot e arquitetura de APIs REST, combinando isso com minha base técnica em eletrotécnica e sistemas complexos.",
+      "Estudo ",
+    about_paragraph2_1b:
+      "Spring Boot e arquitetura de APIs REST, ",
+    about_paragraph2_2:
+      "combinando isso com minha base técnica em eletrotécnica e sistemas complexos.",
     about_paragraph3:
-      "Atualmente curso Ciências da Computação na FAESA, após ter concluído o Curso Técnico em Eletrotécnica pelo SENAI, formação que fortaleceu minha capacidade de análise e resolução de problemas.",
+      "Atualmente curso ",
+    about_paragraph3_1b:
+      "Ciências da Computação ",
+    about_paragraph3_2:
+      "na FAESA, após ter concluído o Curso ",
+    about_paragraph3_2b:
+      "Técnico em Eletrotécnica ",
+    about_paragraph3_3:
+      "pelo SENAI, formação que fortaleceu minha capacidade de análise e resolução de problemas.",
     about_paragraph4:
       "No fim, meu objetivo é simples: evoluir sempre e entregar projetos que façam sentido.",
 
@@ -49,7 +67,11 @@ export const texts = {
     // Projects section
     projects_title: "Projetos",
     projects_description:
-      "Todos os meus projetos são Open Source. Sinta-se à vontade para explorar o código e avaliar aspectos como organização, escalabilidade, clareza e arquitetura.",
+      "Todos os meus projetos são ",
+    projects_description_b:
+      "Open Source. ",
+    projects_description2:
+      "Sinta-se à vontade para explorar o código e avaliar aspectos como organização, escalabilidade, clareza e arquitetura.",
 
     project_troco_title: "Troco",
     project_troco_desc:
@@ -105,16 +127,34 @@ export const texts = {
     // Hero
     hero_role: "Backend & Mobile Developer",
     hero_name: "Andrew Doni",
+    hero_button1: "Skills",
+    hero_button2: "Contact Me",
 
     // About
     about_title: "About Me",
     about_who_am_i: "Who am I?",
     about_paragraph1:
-      "Hello! I'm Andrew Doni, a developer focused on Backend & Mobile. Naturally curious, I enjoy understanding how things work and turning ideas into clean, efficient, and well-structured applications.",
+      "Hello! I'm Andrew Doni, a ",
+    about_paragraph1_1b:
+      "developer focused on Backend & Mobile. ",
+    about_paragraph1_2:
+      "Naturally curious, I enjoy understanding how things work and turning ideas into clean, efficient, and well-structured applications.",
     about_paragraph2:
-      "I study Spring Boot and REST API architecture, combining this with my technical background in electrotechnics and complex systems.",
+      "I study ",
+    about_paragraph2_1b:
+      "Spring Boot and REST API architecture, ",
+    about_paragraph2_2:
+      "combining this with my technical background in electrotechnics and complex systems. ",
     about_paragraph3:
-      "I am currently studying Computer Science at FAESA, after completing the Electrotechnics Technical Course at SENAI, a training that strengthened my analytical and problem-solving skills.",
+      "I am currently studying ",
+    about_paragraph3_1b:
+      "Computer Science ",
+    about_paragraph3_2:
+      "at FAESA, after completing the ",
+    about_paragraph3_2b:
+      "Electrotechnics Technical Course ",
+    about_paragraph3_3:
+      "at SENAI, a training that strengthened my analytical and problem-solving skills.",
     about_paragraph4:
       "In the end, my goal is simple: to always evolve and deliver projects that make sense.",
 

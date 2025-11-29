@@ -1,48 +1,60 @@
 
 import GlassSurface from "./GlassSurface.jsx";
+import { useT } from "./useT.js";
 
 export default function Hero() {
+  const t = useT();
 
   const scrollToSection = (id, offset = -150) => {
-  const el = document.getElementById(id);
-  if (!el) return;
+    const el = document.getElementById(id);
+    if (!el) return;
 
-  try {
-    if (window.lenis && typeof window.lenis.scrollTo === "function") {
-      window.lenis.scrollTo(el, { offset });
-      return;
-    }
-  } catch {}
+    try {
+      if (window.lenis && typeof window.lenis.scrollTo === "function") {
+        window.lenis.scrollTo(el, { offset });
+        return;
+      }
+    } catch {}
 
-  const top = el.getBoundingClientRect().top + window.scrollY + offset;
-  window.scrollTo({ top, behavior: "smooth" });
-};
+    const top = el.getBoundingClientRect().top + window.scrollY + offset;
+    window.scrollTo({ top, behavior: "smooth" });
+  };
 
   return (
-    <section id="hero" className="min-h-screen flex flex-col items-center justify-center space-y-8 text-center z-10 px-4 relative">
-      <p className="text-xl text-gray-300 -mb-4">Desenvolvedor Backend & Mobile</p>
-      <h1 className="text-6xl font-bold">Andrew Doni</h1>
+    <section
+      id="hero"
+      className="min-h-screen flex flex-col items-center justify-center space-y-8 text-center z-10 px-4 relative"
+    >
+      {/* Subtítulo */}
+      <p className="text-xl text-gray-300 -mb-4">
+        {t("hero_role")}
+      </p>
 
+      {/* Nome */}
+      <h1 className="text-6xl font-bold">
+        {t("hero_name")}
+      </h1>
+
+      {/* Botões centrais */}
       <div className="flex space-x-6 mt-6">
-        
         <button
           type="button"
           onClick={() => scrollToSection("habilidades")}
           className="group p-0 rounded-full focus:outline-none"
         >
-        <GlassSurface
-          width={180}
-          height={60}
-          borderRadius={40}
-          opacity={0.18}
-          brightness={55}
-          mixBlendMode="screen"
-          className="group flex items-center justify-center px-4 py-2 cursor-pointer transition-all"
-        >
-          <span className="text-lg font-medium transition-all duration-300 group-hover:scale-110 group-hover:font-bold">
-            Habilidades
-          </span>
-        </GlassSurface>
+          <GlassSurface
+            width={180}
+            height={60}
+            borderRadius={40}
+            opacity={0.18}
+            brightness={55}
+            mixBlendMode="screen"
+            className="group flex items-center justify-center px-4 py-2 cursor-pointer transition-all"
+          >
+            <span className="text-lg font-medium transition-all duration-300 group-hover:scale-110 group-hover:font-bold">
+              {t("hero_button1")}
+            </span>
+          </GlassSurface>
         </button>
 
         <button
@@ -50,22 +62,23 @@ export default function Hero() {
           onClick={() => scrollToSection("contato")}
           className="group p-0 rounded-full focus:outline-none"
         >
-        <GlassSurface
-          width={180}
-          height={60}
-          borderRadius={40}
-          opacity={0.18}
-          brightness={55}
-          mixBlendMode="screen"
-          className="group flex items-center justify-center px-4 py-2 cursor-pointer transition-all"
-        >
-          <span className="text-lg font-medium transition-all duration-300 group-hover:scale-110 group-hover:font-bold">
-            Contate-me
-          </span>
-        </GlassSurface>
+          <GlassSurface
+            width={180}
+            height={60}
+            borderRadius={40}
+            opacity={0.18}
+            brightness={55}
+            mixBlendMode="screen"
+            className="group flex items-center justify-center px-4 py-2 cursor-pointer transition-all"
+          >
+            <span className="text-lg font-medium transition-all duration-300 group-hover:scale-110 group-hover:font-bold">
+              {t("hero_button2")}
+            </span>
+          </GlassSurface>
         </button>
       </div>
 
+      {/* Ícones sociais */}
       <div className="flex space-x-6 mt-6">
         <a
           href="https://github.com/euEndro"
@@ -102,8 +115,6 @@ export default function Hero() {
             <path d="M116 3H12a8.91 8.91 0 00-9 8.8v104.42a8.91 8.91 0 009 8.78h104a8.93 8.93 0 009-8.81V11.77A8.93 8.93 0 00116 3zM39.17 107H21.06V48.73h18.11zm-9-66.21a10.5 10.5 0 1110.49-10.5 10.5 10.5 0 01-10.54 10.48zM107 107H88.89V78.65c0-6.75-.12-15.44-9.41-15.44s-10.87 7.36-10.87 15V107H50.53V48.73h17.36v8h.24c2.42-4.58 8.32-9.41 17.13-9.41C103.6 47.28 107 59.35 107 75z"/>
           </svg>
         </a>
-
-        
       </div>
     </section>
   );

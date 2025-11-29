@@ -1,30 +1,33 @@
 
 import TiltedCard from './TiltedCard';
+import { useT } from './useT.js'
 
 export default function About() {
+  const t = useT();
+
   return (
     <section
       id="sobre-mim"
       className="w-full pb-[20vh] text-white flex flex-col items-center relative"
     >
           <h2 className="text-4xl font-bold text-white mb-20">
-            Sobre Mim
+            {t("nav_about")}
           </h2>
 
       <div className="max-w-6xl px-6 flex flex-col md:flex-row items-center gap-12">
         
         {/* Texto */}
         <div className="flex-1 text-center md:text-left">
-          <h3 className="text-3xl font-bold mb-6">Quem sou eu?</h3>
+          <h3 className="text-3xl font-bold mb-6">{t("about_who_am_i")}</h3>
           <p className="text-base text-white leading-relaxed mb-6">
-            Olá! Eu sou o Andrew Doni, <b>desenvolvedor focado em Backend & Mobile. </b>
-            Curioso por natureza, gosto de entender como as coisas funcionam e transformar ideias em aplicações limpas, eficientes e bem estruturadas.
+            {t("about_paragraph1")} <b>{t("about_paragraph1_1b")}</b>
+            {t("about_paragraph1_2")}
             <br />
-            Estudo <b>Spring Boot</b> e arquitetura de <b>APIs REST</b>, combinando isso com minha base técnica em eletrotécnica e sistemas complexos
+            {t("about_paragraph2")}<b>{t("about_paragraph2_1b")}</b>{t("about_paragraph2_2")}
             <br />
-            Atualmente curso <b>Ciências da Computação</b> na FAESA, após ter concluído o Curso <b>Técnico em Eletrotécnica</b> pelo SENAI, formação que fortaleceu minha capacidade de análise e resolução de problemas.
+            {t("about_paragraph3")}<b>{t("about_paragraph3_1b")}</b>{t("about_paragraph3_2")}<b>{t("about_paragraph3_2b")}</b>{t("about_paragraph3_3")}
             <br />
-            No fim, meu objetivo é simples: evoluir sempre e entregar projetos que façam sentido.
+            {t("about_paragraph4")}
           </p>
         </div>
 

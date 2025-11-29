@@ -1,20 +1,24 @@
 
 import { useState, useEffect, useRef } from "react";
 import GlassSurface from "./GlassSurface.jsx";
-
-const menuItems = [
-  { label: "Apresentação", id: "hero" },
-  { label: "Sobre Mim", id: "sobre-mim" },
-  { label: "Habilidades", id: "habilidades" },
-  { label: "Projetos", id: "projetos" },
-  { label: "Contate-me", id: "contato" }
-];
+import { useLanguage } from "./LanguageContext.jsx";
+import { useT } from "./useT.js";
 
 export default function Navbar() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [language, setLanguage] = useState("PT-BR");
   const [isScrolling, setIsScrolling] = useState(false);
   const scrollTimeout = useRef(null);
+
+  const { language, setLanguage } = useLanguage();
+  const t = useT();
+
+  const menuItems = [
+    { label: t("nav_presentation"), id: "hero" },
+    { label: t("nav_about"), id: "sobre-mim" },
+    { label: t("nav_skills"), id: "habilidades" },
+    { label: t("nav_projects"), id: "projetos" },
+    { label: t("nav_contact"), id: "contato" }
+  ];
 
   const yOffset = -140;
 
@@ -32,15 +36,12 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Reinicia o timeout toda vez que ocorre scroll
       if (scrollTimeout.current) clearTimeout(scrollTimeout.current);
 
-      // Após 150ms sem scroll → scroll acabou
       scrollTimeout.current = setTimeout(() => {
         setIsScrolling(false);
       }, 150);
 
-      // Se estamos scrollando automaticamente → não atualizar activeIndex
       if (isScrolling) return;
 
       let currentIndex = 0;
@@ -67,7 +68,7 @@ export default function Navbar() {
     handleScroll();
 
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [isScrolling]);
+  }, [isScrolling, language]); // importante: atualizar textos ao trocar idioma
 
   return (
     <div className="fixed top-6 w-full flex justify-center z-50 px-4">

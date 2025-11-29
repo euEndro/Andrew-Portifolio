@@ -1,32 +1,30 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import { useT } from "./useT.js";
 
-const projects = [
+const projects = (t) => [
   {
-    title: "Troco",
-    description:
-      "App pessoal para monitoramento financeiro. Histórico de transações, gráficos intuitivos, organização simples e design moderno.",
+    title: t("project_troco_title"),
+    description: t("project_troco_desc"),
     tech: ["Flutter", "Dart", "UI/UX"],
     repo: "https://github.com/euEndro/Troco",
   },
   {
-    title: "Gestok",
-    description:
-      "Sistema web SaaS para gerenciamento de estoque, com visualização de produtos, controle de entradas/saídas e logica intuitiva.",
+    title: t("project_gestok_title"),
+    description: t("project_gestok_desc"),
     tech: ["Java", "Spring Boot", "PostgreSQL"],
     repo: "https://github.com/euEndro/Gestok",
   },
   {
-    title: "Portfolio",
-    description:
-      "Este site que você está vendo agora! Design moderno e animações suaves.",
+    title: t("project_portfolio_title"),
+    description: t("project_portfolio_desc"),
     tech: ["JavaScript", "React", "Tailwind", "Vite"],
     repo: "https://github.com/euEndro/Andrew-Portifolio",
   },
 ];
 
-function ProjectCard({ project }) {
+function ProjectCard({ project, t }) {
   return (
     <motion.div
       whileHover={{ scale: 1.03 }}
@@ -59,11 +57,13 @@ function ProjectCard({ project }) {
         ))}
       </div>
 
-      {/* 🔗 Botão do Repositório */}
       {project.repo && (
         <motion.a
           whileTap={{ scale: 0.95 }}
-          whileHover={{ backgroundColor: "rgba(255,255,255,0.25)", scale: 1.02 }}
+          whileHover={{
+            backgroundColor: "rgba(255,255,255,0.25)",
+            scale: 1.02,
+          }}
           href={project.repo}
           target="_blank"
           className="
@@ -74,7 +74,7 @@ function ProjectCard({ project }) {
             hover:bg-white/20 transition
           "
         >
-          Ver Repositório →
+          {t("project_view_repo")}
         </motion.a>
       )}
     </motion.div>
@@ -82,6 +82,8 @@ function ProjectCard({ project }) {
 }
 
 export default function Projects() {
+  const t = useT();
+
   return (
     <section
       id="projetos"
@@ -90,20 +92,19 @@ export default function Projects() {
         pb-[20vh]
       "
     >
-      
-      <h2 className="text-4xl font-bold mb-5">Projetos</h2>
+      <h2 className="text-4xl font-bold mb-5">{t("projects_title")}</h2>
 
       <p className="text-white text-lg max-w-3xl text-center mb-20">
-        Todos os meus projetos são <b>Open Source</b>. Sinta-se à vontade para explorar o código e avaliar aspectos como organização, escalabilidade, clareza e arquitetura.
+        {t("projects_subtitle1")}
+        <b> {t("projects_subtitle_bold")} </b>
+        {t("projects_subtitle2")}
       </p>
 
-
       <div className="max-w-6xl w-full px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-        {projects.map((project) => (
-          <ProjectCard key={project.title} project={project} />
+        {projects(t).map((project) => (
+          <ProjectCard key={project.title} project={project} t={t} />
         ))}
       </div>
-
-          </section>
+    </section>
   );
 }
