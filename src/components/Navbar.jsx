@@ -11,6 +11,10 @@ export default function Navbar() {
 
   const { language, setLanguage } = useLanguage();
   const t = useT();
+  const pdfFile =
+    language === "ENG"
+      ? "/Andrew-Portfolio-english.docx.pdf"
+      : "/Andrew-Portfolio-br.docx.pdf";
 
   const menuItems = [
     { label: t("nav_presentation"), id: "hero" },
@@ -86,11 +90,19 @@ export default function Navbar() {
         mixBlendMode="screen"
         className="relative flex items-center px-6"
       >
-        <div className="w-24 h-10 font-extrabold rounded-full bg-white flex items-center justify-center">
-          <span className="text-sm font-extrabold" style={{ color: "#000006" }}>
-            PDF
-          </span>
-        </div>
+        <a
+      href={pdfFile}
+      download={
+        language === "ENG"
+          ? "Andrew-Doni-Resume.pdf"
+          : "Curriculo-Andrew-Doni.pdf"
+      }
+      className="w-24 h-10 font-extrabold rounded-full bg-white flex items-center justify-center duration-300 hover:scale-110 transition-all"
+    >
+      <span className="text-sm font-extrabold" style={{ color: "#000006" }}>
+        PDF
+      </span>
+    </a>
 
         <div className="flex-1 flex justify-center space-x-8">
           {menuItems.map((item, index) => {
