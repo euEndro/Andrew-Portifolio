@@ -2,6 +2,8 @@
 import { useState, useEffect, useRef } from "react";
 import GlassSurface from "./GlassSurface.jsx";
 import { useLanguage } from "./LanguageContext.jsx";
+import curriculo from "./../assets/Andrew-Portfolio-br.docx.pdf"
+import resume from "./../assets/Andrew-Portfolio-english.docx.pdf"
 import { useT } from "./useT.js";
 
 export default function Navbar() {
@@ -13,8 +15,8 @@ export default function Navbar() {
   const t = useT();
   const pdfFile =
     language === "ENG"
-      ? "/Andrew-Portfolio-english.docx.pdf"
-      : "/Andrew-Portfolio-br.docx.pdf";
+      ? resume
+      : curriculo;
 
   const menuItems = [
     { label: t("nav_presentation"), id: "hero" },
