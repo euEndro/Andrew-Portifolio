@@ -99,7 +99,7 @@ export default function Navbar() {
           ? "Andrew-Doni-Resume.pdf"
           : "Curriculo-Andrew-Doni.pdf"
       }
-      className="w-16 h-8 text-xs
+      className="w-8 h-8 text-[5px]
         md:w-24 md:h-10 md:text-sm 
         font-extrabold rounded-full bg-white flex items-center justify-center
         transition-all duration-300 hover:scale-110"
@@ -112,9 +112,9 @@ export default function Navbar() {
         <div className="flex-1 
           flex 
           justify-center 
-          space-x-3            /* menor espaçamento no mobile */
+          space-x-1            /* menor espaçamento no mobile */
           md:space-x-8         /* espaçamento original no desktop */
-          text-xs              /* texto menor no mobile */
+          text-[5px]              /* texto menor no mobile */
           md:text-base         /* tamanho normal no desktop */">
           {menuItems.map((item, index) => {
             const isActive = index === activeIndex;
@@ -148,7 +148,7 @@ export default function Navbar() {
         <div className="ml-auto">
           <button
             onClick={() => setLanguage(language === "PT-BR" ? "ENG" : "PT-BR")}
-            className="w-16 h-8 text-xs
+            className="w-8 h-8 text-[5px]
               md:w-24 md:h-10 md:text-sm 
               font-extrabold rounded-full bg-white flex items-center justify-center
               transition-all duration-300 hover:scale-110"
