@@ -1,4 +1,3 @@
-
 import { useEffect, useRef, useState, useId } from 'react';
 
 const useDarkMode = () => {
