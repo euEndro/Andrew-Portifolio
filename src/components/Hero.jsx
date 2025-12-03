@@ -36,47 +36,93 @@ export default function Hero() {
       </h1>
 
       {/* Botões centrais */}
-      <div className="flex space-x-6 mt-6">
-        <button
-          type="button"
-          onClick={() => scrollToSection("habilidades")}
-          className="group p-0 rounded-full focus:outline-none"
-        >
-          <GlassSurface
-            width={180}
-            height={60}
-            borderRadius={40}
-            opacity={0.18}
-            brightness={55}
-            mixBlendMode="screen"
-            className="group flex items-center justify-center px-4 py-2 cursor-pointer transition-all"
-          >
-            <span className="text-lg font-medium transition-all duration-300 group-hover:scale-110 group-hover:font-bold">
-              {t("hero_button1")}
-            </span>
-          </GlassSurface>
-        </button>
+      <>
+  {/* Desktop — botões lado a lado, tamanho normal */}
+  <div className="hidden md:flex space-x-6 mt-6">
+    <button
+      type="button"
+      onClick={() => scrollToSection("habilidades")}
+      className="group p-0 rounded-full focus:outline-none"
+    >
+      <GlassSurface
+        width={180}
+        height={60}
+        borderRadius={40}
+        opacity={0.18}
+        brightness={55}
+        mixBlendMode="screen"
+        className="group flex items-center justify-center px-4 py-2 cursor-pointer transition-all"
+      >
+        <span className="text-lg font-medium transition-all duration-300 group-hover:scale-110 group-hover:font-bold">
+          {t("hero_button1")}
+        </span>
+      </GlassSurface>
+    </button>
 
-        <button
-          type="button"
-          onClick={() => scrollToSection("contato")}
-          className="group p-0 rounded-full focus:outline-none"
-        >
-          <GlassSurface
-            width={180}
-            height={60}
-            borderRadius={40}
-            opacity={0.18}
-            brightness={55}
-            mixBlendMode="screen"
-            className="group flex items-center justify-center px-4 py-2 cursor-pointer transition-all"
-          >
-            <span className="text-lg font-medium transition-all duration-300 group-hover:scale-110 group-hover:font-bold">
-              {t("hero_button2")}
-            </span>
-          </GlassSurface>
-        </button>
-      </div>
+    <button
+      type="button"
+      onClick={() => scrollToSection("contato")}
+      className="group p-0 rounded-full focus:outline-none"
+    >
+      <GlassSurface
+        width={180}
+        height={60}
+        borderRadius={40}
+        opacity={0.18}
+        brightness={55}
+        mixBlendMode="screen"
+        className="group flex items-center justify-center px-4 py-2 cursor-pointer transition-all"
+      >
+        <span className="text-lg font-medium transition-all duration-300 group-hover:scale-110 group-hover:font-bold">
+          {t("hero_button2")}
+        </span>
+      </GlassSurface>
+    </button>
+  </div>
+
+  {/* Mobile — botões empilhados e menores */}
+  <div className="flex flex-col md:hidden space-y-4 mt-6">
+    <button
+      type="button"
+      onClick={() => scrollToSection("habilidades")}
+      className="group p-0 rounded-full focus:outline-none"
+    >
+      <GlassSurface
+        width={150}   // 👈 menor
+        height={50}   // 👈 menor
+        borderRadius={35}
+        opacity={0.20}
+        brightness={55}
+        mixBlendMode="screen"
+        className="group flex items-center justify-center px-3 py-2 cursor-pointer transition-all"
+      >
+        <span className="text-base font-medium transition-all duration-300 group-hover:scale-110 group-hover:font-bold">
+          {t("hero_button1")}
+        </span>
+      </GlassSurface>
+    </button>
+
+    <button
+      type="button"
+      onClick={() => scrollToSection("contato")}
+      className="group p-0 rounded-full focus:outline-none"
+    >
+      <GlassSurface
+        width={150}   // 👈 menor
+        height={50}   // 👈 menor
+        borderRadius={35}
+        opacity={0.20}
+        brightness={55}
+        mixBlendMode="screen"
+        className="group flex items-center justify-center px-3 py-2 cursor-pointer transition-all"
+      >
+        <span className="text-base font-medium transition-all duration-300 group-hover:scale-110 group-hover:font-bold">
+          {t("hero_button2")}
+        </span>
+      </GlassSurface>
+    </button>
+  </div>
+</>
 
       {/* Ícones sociais */}
       <div className="flex space-x-6 mt-6">
