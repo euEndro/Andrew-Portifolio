@@ -80,8 +80,9 @@ export default function Skills() {
   return (
     <section id="habilidades" className="w-full pb-[20vh] text-white flex flex-col items-center">
       
-      <h2 className="text-4xl font-bold mb-20">
-        {t("skills_title")}
+      <h2 className="text-4xl font-bold mb-20 text-center">
+        {t("skills_title")}<br />
+        {t("skills_title2")}
       </h2>
 
       <div className="max-w-6xl w-full px-4">

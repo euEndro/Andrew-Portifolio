@@ -43,7 +43,8 @@ export const texts = {
       "No fim, meu objetivo é simples: evoluir sempre e entregar projetos que façam sentido.",
 
     // Skills
-    skills_title: "Habilidades Técnicas",
+    skills_title: "Habilidades ",
+    skills_title2: "Técnicas",
     skills_languages: "Linguagens",
     skills_frameworks: "Frameworks",
     skills_databases: "Bancos de Dados",
@@ -159,7 +160,8 @@ export const texts = {
       "In the end, my goal is simple: to always evolve and deliver projects that make sense.",
 
     // Skills
-    skills_title: "Technical Skills",
+    skills_title: "Technical ",
+    skills_title2: "Skills",
     skills_languages: "Languages",
     skills_frameworks: "Frameworks",
     skills_databases: "Databases",

@@ -88,8 +88,8 @@ export default function Hero() {
       className="group p-0 rounded-full focus:outline-none"
     >
       <GlassSurface
-        width={150}   // 👈 menor
-        height={50}   // 👈 menor
+        width={180}   // 👈 menor
+        height={60}   // 👈 menor
         borderRadius={35}
         opacity={0.20}
         brightness={55}
@@ -108,8 +108,8 @@ export default function Hero() {
       className="group p-0 rounded-full focus:outline-none"
     >
       <GlassSurface
-        width={150}   // 👈 menor
-        height={50}   // 👈 menor
+        width={180}   // 👈 menor
+        height={60}   // 👈 menor
         borderRadius={35}
         opacity={0.20}
         brightness={55}

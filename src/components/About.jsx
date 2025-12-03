@@ -43,7 +43,7 @@ export default function About() {
             imageHeight="300px"
             imageWidth="300px"
             rotateAmplitude={12}
-            scaleOnHover={1.3}
+            scaleOnHover={1.1}
             showMobileWarning={false}
             showTooltip={false}
             displayOverlayContent={false}
