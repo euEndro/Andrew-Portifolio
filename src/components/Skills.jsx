@@ -68,6 +68,8 @@ export default function Skills() {
       { name: "GitHub", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" },
       { name: "Linux", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-plain.svg" },
       { name: "Postman", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-plain.svg" },
+      { name: "Cloud", logo: "https://unpkg.com/heroicons@2.0.18/24/solid/cloud.svg"},
+      { name: "Server infrastructure", logo: "https://unpkg.com/heroicons@2.0.18/24/solid/server-stack.svg"},
     ],
   };
 
