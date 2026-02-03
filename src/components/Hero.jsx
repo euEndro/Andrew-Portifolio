@@ -41,7 +41,7 @@ export default function Hero() {
   <div className="hidden md:flex space-x-6 mt-6">
     <button
       type="button"
-      onClick={() => scrollToSection("habilidades")}
+      onClick={() => window.open('https://dlgroup.cloud', '_blank')}
       className="group p-0 rounded-full focus:outline-none"
     >
       <GlassSurface

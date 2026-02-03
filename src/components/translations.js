@@ -9,9 +9,9 @@ export const texts = {
     nav_contact: "Contate-me",
 
     // Hero
-    hero_role: "Desenvolvedor Backend & Mobile",
+    hero_role: "Fundador e Engenheiro de Software na DL Group",
     hero_name: "Andrew Doni",
-    hero_button1: "Habilidades",
+    hero_button1: "DL Group",
     hero_button2: "Contate-me",
 
     // About
@@ -126,10 +126,10 @@ export const texts = {
     nav_contact: "Contact Me",
 
     // Hero
-    hero_role: "Backend & Mobile Developer",
+    hero_role: "Founder & Software Engineer at DL Group",
     hero_name: "Andrew Doni",
-    hero_button1: "Skills",
-    hero_button2: "Contact Me",
+    hero_button1: "DL Group",
+    hero_button2: "Contact me",
 
     // About
     about_title: "About Me",
