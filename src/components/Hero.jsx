@@ -56,6 +56,19 @@ export default function Hero() {
         <span className="text-lg font-medium transition-all duration-300 group-hover:scale-110 group-hover:font-bold">
           {t("hero_button1")}
         </span>
+        <svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  strokeWidth="2"
+  strokeLinecap="round"
+  strokeLinejoin="round"
+  className="absolute top-2 right-1 w-4 h-4 opacity-50 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1"
+>
+  <path d="M7 17L17 7" />
+  <path d="M10 7h7v7" />
+</svg>
       </GlassSurface>
     </button>
 
