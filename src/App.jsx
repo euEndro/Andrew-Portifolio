@@ -42,9 +42,9 @@ export default function App() {
       <div className="fixed inset-0 w-full h-full -z-10 pointer-events-none">
         <ColorBends
           colors={[
-            "#0f141a",
-            "#2a3b4e",
-            "#8fa5ba"
+            "#0b0f14",
+            "#1d2733",
+            "#5f6f82"
           ]}
           noise={0}
           mouseInfluence={0}
