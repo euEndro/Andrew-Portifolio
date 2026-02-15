@@ -22,6 +22,12 @@ const projects = (t) => [
     tech: ["JavaScript", "React", "Tailwind", "Vite"],
     repo: "https://github.com/euEndro/Andrew-Portifolio",
   },
+  {
+    title: t("project_dlgroup_title"),
+    description: t("project_dlgroup_desc"),
+    tech: ["JavaScript", "React", "Tailwind", "Vite"],
+    repo: "https://github.com/D-L-Group/Portfolio",
+  },
 ];
 
 function ProjectCard({ project, t }) {

@@ -68,8 +68,8 @@ export default function App() {
         <GradualBlur
           target="page"
           position="bottom"
-          height="6rem"
-          strength={2}
+          height="3rem"
+          strength={1}
           divCount={5}
           curve="bezier"
           exponential={true}

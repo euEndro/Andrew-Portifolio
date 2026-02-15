@@ -1,6 +1,6 @@
 
 import TiltedCard from './TiltedCard';
-import photo from '../assets/Gemini_Generated_Image_d3q2k5d3q2k5d3q2 (1).png'
+import photo from '../assets/20260214_205724(1).jpg'
 import { useT } from './useT.js'
 
 export default function About() {

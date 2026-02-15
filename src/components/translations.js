@@ -20,15 +20,15 @@ export const texts = {
     about_paragraph1:
       "Olá! Eu sou o Andrew Doni, ",
     about_paragraph1_1b:
-      "desenvolvedor focado em Backend & Mobile. ",
+      "engenheiro de software com foco em infraestrutura, produção e soluções B2B. ",
     about_paragraph1_2:
       "Curioso por natureza, gosto de entender como as coisas funcionam e transformar ideias em aplicações limpas, eficientes e bem estruturadas.",
     about_paragraph2:
-      "Estudo ",
+      "Atualmente estudo e atuo com ",
     about_paragraph2_1b:
-      "Spring Boot e arquitetura de APIs REST, ",
+      "Linux, VPS, Docker, Nginx, deploy automatizado, observabilidade e arquitetura de infraestrutura, ",
     about_paragraph2_2:
-      "combinando isso com minha base técnica em eletrotécnica e sistemas complexos.",
+      "aplicando boas práticas de engenharia para ambientes reais de produção.",
     about_paragraph3:
       "Atualmente curso ",
     about_paragraph3_1b:
@@ -40,7 +40,7 @@ export const texts = {
     about_paragraph3_3:
       "pelo SENAI, formação que fortaleceu minha capacidade de análise e resolução de problemas.",
     about_paragraph4:
-      "No fim, meu objetivo é simples: evoluir sempre e entregar projetos que façam sentido.",
+      "Hoje, meu principal objetivo é construir soluções sólidas para empresas (B2B), unindo desenvolvimento, infraestrutura e automação para entregar sistemas eficientes, escaláveis e confiáveis.",
 
     // Skills
     skills_title: "Habilidades ",
@@ -83,8 +83,10 @@ export const texts = {
       "Sistema web SaaS para gerenciamento de estoque, com visualização de produtos, controle de entradas/saídas e lógica intuitiva.",
 
     project_portfolio_title: "Portfolio",
-    project_portfolio_desc:
-      "Este site que você está vendo agora! Design moderno e animações suaves.",
+    project_portfolio_desc: "Landing page moderna com componentes altamente criativos e artísticos, rica em efeitos visuais, animações fluidas e interações dinâmicas. O design foi inspirado na identidade visual da Apple, priorizando elegância e alto impacto estético, aliando estética avançada com performance e fluidez.",
+
+    project_dlgroup_title: "DL Group",
+    project_dlgroup_desc: "Landing page moderna e responsiva, com foco em performance, design limpo e boa experiência do usuário, utilizando animações sutis, navegação fluida e arquitetura front-end organizada.",
 
     project_view_repo: "Ver Repositório →",
 
@@ -135,29 +137,32 @@ export const texts = {
     about_title: "About Me",
     about_who_am_i: "Who am I?",
     about_paragraph1:
-      "Hello! I'm Andrew Doni, a ",
-    about_paragraph1_1b:
-      "developer focused on Backend & Mobile. ",
-    about_paragraph1_2:
-      "Naturally curious, I enjoy understanding how things work and turning ideas into clean, efficient, and well-structured applications.",
-    about_paragraph2:
-      "I study ",
-    about_paragraph2_1b:
-      "Spring Boot and REST API architecture, ",
-    about_paragraph2_2:
-      "combining this with my technical background in electrotechnics and complex systems. ",
-    about_paragraph3:
-      "I am currently studying ",
-    about_paragraph3_1b:
-      "Computer Science ",
-    about_paragraph3_2:
-      "at FAESA, after completing the ",
-    about_paragraph3_2b:
-      "Electrotechnics Technical Course ",
-    about_paragraph3_3:
-      "at SENAI, a training that strengthened my analytical and problem-solving skills.",
-    about_paragraph4:
-      "In the end, my goal is simple: to always evolve and deliver projects that make sense.",
+  "Hello! I’m Andrew Doni, ",
+about_paragraph1_1b:
+  "a software engineer focused on infrastructure, production, and B2B solutions. ",
+about_paragraph1_2:
+  "Naturally curious, I enjoy understanding how things work and turning ideas into clean, efficient, and well-structured applications.",
+
+about_paragraph2:
+  "Currently, I study and work with ",
+about_paragraph2_1b:
+  "Linux, VPS, Docker, Nginx, automated deployment, observability, and infrastructure architecture, ",
+about_paragraph2_2:
+  "applying solid engineering practices to real-world production environments.",
+
+about_paragraph3:
+  "I am currently pursuing a degree in ",
+about_paragraph3_1b:
+  "Computer Science ",
+about_paragraph3_2:
+  "at FAESA, after completing a ",
+about_paragraph3_2b:
+  "Technical Program in Electrical Engineering ",
+about_paragraph3_3:
+  "at SENAI, a background that strengthened my analytical thinking and problem-solving skills.",
+
+about_paragraph4:
+  "Today, my main goal is to build solid solutions for businesses (B2B), combining software development, infrastructure, and automation to deliver efficient, scalable, and reliable systems.",
 
     // Skills
     skills_title: "Technical ",
@@ -197,7 +202,10 @@ export const texts = {
 
     project_portfolio_title: "Portfolio",
     project_portfolio_desc:
-      "This website you're seeing right now! Modern design and smooth animations.",
+      "Modern landing page featuring highly creative and artistic components, rich visual effects, smooth animations, and dynamic interactions. The design is inspired by Apple’s visual identity, focusing on elegance, and high visual impact, combining advanced aesthetics with performance and smooth navigation.",
+
+    project_dlgroup_title: "DL Group",
+    project_dlgroup_desc: "Modern and responsive landing page focused on performance, clean design, and user experience, featuring subtle animations, smooth navigation, and a well-structured front-end architecture.",
 
     project_view_repo: "View Repository →",
 
