@@ -9,10 +9,13 @@ export const texts = {
     nav_contact: "Contate-me",
 
     // Hero
-    hero_role: "Fundador e Engenheiro de Software na DL Group",
+    hero_role: "Fundador e Engenheiro de Software na Docalli",
     hero_name: "Andrew Doni",
-    hero_button1: "DL Group",
+    hero_button1: "Docalli",
     hero_button2: "Contate-me",
+    hero_shelf_label: "Prática",
+    hero_shelf_architecture: "Arquitetura",
+    hero_shelf_infrastructure: "Infraestrutura",
 
     // About
     about_title: "Sobre Mim",
@@ -26,7 +29,7 @@ export const texts = {
     about_paragraph2:
       "Atualmente estudo e atuo com ",
     about_paragraph2_1b:
-      "Linux, VPS, Docker, Nginx, deploy automatizado, observabilidade e arquitetura de infraestrutura, ",
+      "Linux, VPS, Docker, Nginx, automação de processos, observabilidade, inteligência artificial e arquitetura de infraestrutura, ",
     about_paragraph2_2:
       "aplicando boas práticas de engenharia para ambientes reais de produção.",
     about_paragraph3:
@@ -50,6 +53,19 @@ export const texts = {
     skills_databases: "Bancos de Dados",
     skills_technologies: "Tecnologias",
 
+    skills_domain_systems: "Sistemas & Infraestrutura",
+    skills_domain_systems_desc:
+      "Onde decido como um sistema roda em produção: deploy, ambientes e a infraestrutura da qual tudo mais depende.",
+    skills_domain_architecture: "Arquitetura & Backend",
+    skills_domain_architecture_desc:
+      "As decisões de backend: modelagem de dados, limites de serviço e as linguagens em que construo sistemas duráveis.",
+    skills_domain_product: "Engenharia de Produto",
+    skills_domain_product_desc:
+      "Onde a arquitetura encontra a interface, construindo a camada do produto que as pessoas realmente tocam.",
+    skills_domain_practice: "Prática & Ferramentas",
+    skills_domain_practice_desc:
+      "A disciplina do dia a dia: controle de versão, testes e os scripts que mantêm o resto honesto.",
+
     // Skills list
     lang_java: "Java",
     lang_dart: "Dart",
@@ -68,27 +84,40 @@ export const texts = {
     // Projects section
     projects_title: "Projetos",
     projects_description:
-      "Todos os meus projetos são ",
+      "Um retrato de como eu ",
     projects_description_b:
-      "Open Source. ",
+      "penso e construo software, ",
     projects_description2:
-      "Sinta-se à vontade para explorar o código e avaliar aspectos como organização, escalabilidade, clareza e arquitetura.",
+      "da lógica de negócio à infraestrutura que sustenta cada solução em produção.",
+
+    project_atrio_title: "Átrio",
+    project_atrio_desc:
+      "RAG empresarial conversacional: centraliza o conhecimento da empresa numa base vetorial que se atualiza sozinha, e opera Google Calendar, Gmail, Docs, Sheets e Drive direto pelo chat. Backend em FastAPI, app mobile em Flutter.",
+
+    project_whatsapp_ai_title: "Vendedor de IA para WhatsApp",
+    project_whatsapp_ai_desc:
+      "Agente de IA que atende no WhatsApp da empresa 24/7: entende linguagem natural, consulta catálogo e preços em tempo real, fecha pedidos e aciona um humano quando o assunto exige. Já em uso por clientes reais, orquestrado com n8n, Evolution API e Redis.",
 
     project_troco_title: "Troco",
     project_troco_desc:
-      "App pessoal para monitoramento financeiro. Histórico de transações, gráficos intuitivos, organização simples e design moderno.",
+      "App de monitoramento financeiro construído em torno de uma IA acessível pelo WhatsApp: conecte sua conta e converse com o Troco para acompanhar transações, gráficos e sua situação financeira em tempo real, com organização simples e design moderno.",
 
     project_gestok_title: "Gestok",
     project_gestok_desc:
-      "Sistema web SaaS para gerenciamento de estoque, com visualização de produtos, controle de entradas/saídas e lógica intuitiva.",
+      "Sistema web de gerenciamento de estoque, construído como projeto de estudo para aprofundar Java e Spring Boot: visualização de produtos, controle de entradas e saídas, e lógica de negócio completa. Não é um sistema em produção.",
 
-    project_portfolio_title: "Portfolio",
-    project_portfolio_desc: "Landing page moderna com componentes altamente criativos e artísticos, rica em efeitos visuais, animações fluidas e interações dinâmicas. O design foi inspirado na identidade visual da Apple, priorizando elegância e alto impacto estético, aliando estética avançada com performance e fluidez.",
+    project_dlgroup_title: "Docalli",
+    project_dlgroup_desc: "Site institucional completo, do frontend ao backend: interface responsiva com animações sutis e navegação fluida, API própria em FastAPI com PostgreSQL, e camadas de segurança como rate limiting, validação de email e proteção contra bots com Cloudflare Turnstile.",
 
-    project_dlgroup_title: "DL Group",
-    project_dlgroup_desc: "Landing page moderna e responsiva, com foco em performance, design limpo e boa experiência do usuário, utilizando animações sutis, navegação fluida e arquitetura front-end organizada.",
+    project_maintenance_title: "Automação de Comunicados",
+    project_maintenance_desc:
+      "Automação que avisa cada cliente sobre a próxima visita de manutenção sozinha, todos os dias: lê a agenda, filtra por antecedência, gera o comunicado personalizado em PDF e envia por WhatsApp e e-mail. Zero intervenção humana. Já em produção, usado por clientes reais.",
 
+    project_visit_site: "Ver Site →",
     project_view_repo: "Ver Repositório →",
+    project_status_dev: "Em Desenvolvimento",
+    project_status_archived: "Arquivado",
+    project_status_prod: "Em Produção",
 
     // Tech tags
     tech_flutter: "Flutter",
@@ -106,14 +135,17 @@ export const texts = {
     contact_title: "Contate-me",
     contact_how_to: "Como entrar em contato?",
     contact_paragraph1:
-      "Se você deseja falar comigo — seja para discutir oportunidades de trabalho, propostas de parceria, desenvolvimento de soluções personalizadas ou simplesmente trocar uma ideia sobre tecnologia — estou sempre aberto a conversas.",
+      "Se você deseja falar comigo (seja para discutir oportunidades de trabalho, propostas de parceria, desenvolvimento de soluções personalizadas ou simplesmente trocar uma ideia sobre tecnologia), estou sempre aberto a conversas.",
     contact_paragraph2:
       "Fique à vontade para usar o formulário ao lado. Leia, escreva com calma e envie sua mensagem; ela chegará diretamente ao meu e-mail exatamente como for preenchida.",
 
     contact_email: "Seu email",
     contact_subject: "Assunto",
     contact_content: "Conteúdo",
-    contact_send: "Enviar"
+    contact_send: "Enviar",
+    contact_sending: "Enviando...",
+    contact_sent_success: "Mensagem enviada. Retorno em breve.",
+    contact_sent_error: "Algo deu errado. Tente novamente ou me chame direto por e-mail."
   },
 
   // ======================
@@ -128,10 +160,13 @@ export const texts = {
     nav_contact: "Contact Me",
 
     // Hero
-    hero_role: "Founder & Software Engineer at DL Group",
+    hero_role: "Founder & Software Engineer at Docalli",
     hero_name: "Andrew Doni",
-    hero_button1: "DL Group",
+    hero_button1: "Docalli",
     hero_button2: "Contact me",
+    hero_shelf_label: "Practice",
+    hero_shelf_architecture: "Architecture",
+    hero_shelf_infrastructure: "Infrastructure",
 
     // About
     about_title: "About Me",
@@ -146,7 +181,7 @@ about_paragraph1_2:
 about_paragraph2:
   "Currently, I study and work with ",
 about_paragraph2_1b:
-  "Linux, VPS, Docker, Nginx, automated deployment, observability, and infrastructure architecture, ",
+  "Linux, VPS, Docker, Nginx, process automation, observability, artificial intelligence, and infrastructure architecture, ",
 about_paragraph2_2:
   "applying solid engineering practices to real-world production environments.",
 
@@ -172,6 +207,19 @@ about_paragraph4:
     skills_databases: "Databases",
     skills_technologies: "Technologies",
 
+    skills_domain_systems: "Systems & Infrastructure",
+    skills_domain_systems_desc:
+      "Where I make the call on how a system runs in production: deployment, environments, and the infrastructure everything else depends on.",
+    skills_domain_architecture: "Architecture & Backend",
+    skills_domain_architecture_desc:
+      "The backend decisions: data modeling, service boundaries, and the languages I build durable systems in.",
+    skills_domain_product: "Product Engineering",
+    skills_domain_product_desc:
+      "Where architecture meets the interface, building the product layer people actually touch.",
+    skills_domain_practice: "Practice & Tooling",
+    skills_domain_practice_desc:
+      "The daily discipline: version control, testing, and the scripting that keeps the rest honest.",
+
     // Skills list
     lang_java: "Java",
     lang_dart: "Dart",
@@ -190,24 +238,40 @@ about_paragraph4:
     // Projects section
     projects_title: "Projects",
     projects_description:
-      "All my projects are Open Source. Feel free to explore the code and evaluate aspects such as organization, scalability, clarity, and architecture.",
+      "A look at how I ",
+    projects_description_b:
+      "think and build software, ",
+    projects_description2:
+      "from business logic to the infrastructure that keeps each solution running in production.",
+
+    project_atrio_title: "Átrio",
+    project_atrio_desc:
+      "Conversational enterprise RAG: centralizes company knowledge in a self-updating vector database, and operates Google Calendar, Gmail, Docs, Sheets, and Drive right from the chat. FastAPI backend, Flutter mobile app.",
+
+    project_whatsapp_ai_title: "WhatsApp AI Salesperson",
+    project_whatsapp_ai_desc:
+      "AI agent that handles a company's WhatsApp 24/7: understands natural language, checks catalog and prices in real time, closes orders, and hands off to a human when needed. Already in use by real clients, orchestrated with n8n, Evolution API, and Redis.",
 
     project_troco_title: "Troco",
     project_troco_desc:
-      "Personal app for financial monitoring. Transaction history, intuitive charts, simple organization, and modern design.",
+      "Financial monitoring app built around an AI accessible through WhatsApp: connect your account and chat with Troco to track transactions, charts, and your financial situation in real time, with simple organization and modern design.",
 
     project_gestok_title: "Gestok",
     project_gestok_desc:
-      "SaaS web system for inventory management, with product visualization, entry/exit control, and intuitive logic.",
+      "Inventory management web system, built as a study project to deepen my Java and Spring Boot skills: product visualization, entry and exit control, and complete business logic. Not a production system.",
 
-    project_portfolio_title: "Portfolio",
-    project_portfolio_desc:
-      "Modern landing page featuring highly creative and artistic components, rich visual effects, smooth animations, and dynamic interactions. The design is inspired by Apple’s visual identity, focusing on elegance, and high visual impact, combining advanced aesthetics with performance and smooth navigation.",
+    project_dlgroup_title: "Docalli",
+    project_dlgroup_desc: "Full institutional site, from frontend to backend: a responsive interface with subtle animations and smooth navigation, a custom FastAPI API backed by PostgreSQL, and security layers including rate limiting, email validation, and bot protection with Cloudflare Turnstile.",
 
-    project_dlgroup_title: "DL Group",
-    project_dlgroup_desc: "Modern and responsive landing page focused on performance, clean design, and user experience, featuring subtle animations, smooth navigation, and a well-structured front-end architecture.",
+    project_maintenance_title: "Notice Automation",
+    project_maintenance_desc:
+      "Automation that notifies each client about their next maintenance visit on its own, every day: reads the schedule, filters by lead time, generates a personalized PDF notice, and sends it via WhatsApp and email. Zero human intervention. Already in production, used by real clients.",
 
+    project_visit_site: "Visit Site →",
     project_view_repo: "View Repository →",
+    project_status_dev: "In Development",
+    project_status_archived: "Archived",
+    project_status_prod: "In Production",
 
     // Tech tags
     tech_flutter: "Flutter",
@@ -225,13 +289,16 @@ about_paragraph4:
     contact_title: "Contact Me",
     contact_how_to: "How to get in touch?",
     contact_paragraph1:
-      "If you want to talk to me — whether to discuss job opportunities, partnership proposals, custom solutions, or simply chat about technology — I’m always open to conversations.",
+      "If you want to talk to me (whether to discuss job opportunities, partnership proposals, custom solutions, or simply chat about technology), I’m always open to conversations.",
     contact_paragraph2:
       "Feel free to use the form beside. Read, write calmly, and send your message; it will arrive directly in my email exactly as you write it.",
 
     contact_email: "Your email",
     contact_subject: "Subject",
     contact_content: "Content",
-    contact_send: "Send"
+    contact_send: "Send",
+    contact_sending: "Sending...",
+    contact_sent_success: "Message sent. I'll get back to you soon.",
+    contact_sent_error: "Something went wrong. Please try again or email me directly."
   }
 };

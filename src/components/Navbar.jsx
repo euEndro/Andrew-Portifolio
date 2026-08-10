@@ -1,15 +1,15 @@
 
 import { useState, useEffect, useRef } from "react";
-import GlassSurface from "./GlassSurface.jsx";
 import { useLanguage } from "./LanguageContext.jsx";
 import curriculo from "./../assets/Andrew-Portfolio-br.docx.pdf"
 import resume from "./../assets/Andrew-Portfolio-english.docx.pdf"
 import { useT } from "./useT.js";
+import { AndrewMonogram } from "./CabinetIcons.jsx";
 
 export default function Navbar() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isScrolling, setIsScrolling] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false); 
+  const [menuOpen, setMenuOpen] = useState(false);
   const scrollTimeout = useRef(null);
 
   const { language, setLanguage } = useLanguage();
@@ -73,114 +73,88 @@ export default function Navbar() {
   }, [isScrolling, language]);
 
   return (
-    <div className="fixed top-6 w-full flex justify-center z-50 px-4">
-      <GlassSurface
-        width="90%"
-        maxWidth={1200}
-        height={60}
-        borderRadius={40}
-        redOffset={1}
-        greenOffset={2}
-        blueOffset={3}
-        distortionScale={-200}
-        opacity={0.18}
-        brightness={55}
-        mixBlendMode="screen"
-        className="relative flex items-center px-6"
-      >
+    <div className="fixed top-0 w-full z-50">
+      <div className="bg-malachite-deep border-b border-bone-dim/20">
+        <div className="max-w-6xl mx-auto px-5 md:px-8 h-16 flex items-center gap-6">
 
-        {/* ------------------- BUTTONS MOBILE (always visible) ------------------- */}
-        <a
-          href={pdfFile}
-          download={language === "ENG" ? "Andrew-Doni-Resume.pdf" : "Curriculo-Andrew-Doni.pdf"}
-          className="w-20 h-10 text-[10px] 
-                     md:w-24 md:h-10 md:text-sm 
-                     font-extrabold rounded-full bg-white flex items-center justify-center
-                     transition-all duration-300 hover:scale-110
-                     mr-3"
-        >
-          <span className="text-sm font-extrabold" style={{ color: "#000006" }}>
-            PDF
-          </span>
-        </a>
-
-        <button
-          onClick={() => {
-            setLanguage(language === "PT-BR" ? "ENG" : "PT-BR");
-            setMenuOpen(false);
-          }}
-          className="md:hidden w-20 h-10 text-[10px] 
-                     md:w-24 md:h-10 md:text-sm 
-                     font-extrabold rounded-full bg-white flex items-center justify-center
-                     transition-all duration-300 hover:scale-110"
-        >
-          <span className="text-sm font-extrabold text-[#000006]">
-            {language}
-          </span>
-        </button>
-
-        {/* ------------------- DESKTOP MENU ------------------- */}
-        <div className="
-            hidden 
-            md:flex 
-            flex-1 justify-center space-x-8 text-base
-        ">
-          {menuItems.map((item, index) => {
-            const isActive = index === activeIndex;
-            return (
-              <button
-                key={index}
-                onClick={() => {
-                  setActiveIndex(index);
-                  scrollToSection(item.id);}
-                }
-                className={`relative px-4 py-2 transition-all duration-300 ${
-                  isActive
-                    ? "text-white font-bold scale-110"
-                    : "text-white font-medium hover:scale-110 hover:font-bold"
-                }`}
-              >
-                {isActive && (
-                  <span className="absolute inset-0 bg-white rounded px-2 -z-10 opacity-30 blur-xl"></span>
-                )}
-                {item.label}
-              </button>
-            );
-          })}
-        </div>
-
-        {/* ------------------- LANG BUTTON (desktop) ------------------- */}
-        <div className="ml-auto hidden md:flex">
+          {/* Mark */}
           <button
-            onClick={() => setLanguage(language === "PT-BR" ? "ENG" : "PT-BR")}
-            className="w-24 h-10 text-sm font-extrabold rounded-full bg-white flex items-center justify-center hover:scale-110 transition-all"
+            onClick={() => scrollToSection("hero")}
+            className="flex items-center gap-2 shrink-0"
+            aria-label="Andrew Doni"
           >
-            <span style={{ color: "#000006" }}>{language}</span>
+            <AndrewMonogram className="h-5 w-auto text-bone" />
           </button>
-        </div>
 
-        {/* ------------------- HAMBURGER (mobile only) ------------------- */}
-        <button
-          onClick={() => setMenuOpen(!menuOpen)}
-          className="ml-auto md:hidden p-2 rounded-lg bg-white/20 border border-white/30 backdrop-blur-sm"
-        >
-          <div className="space-y-1">
-            <span className="block w-6 h-0.5 bg-white"></span>
-            <span className="block w-6 h-0.5 bg-white"></span>
-            <span className="block w-6 h-0.5 bg-white"></span>
+          {/* Desktop nav */}
+          <nav className="hidden md:flex flex-1 items-center justify-center gap-8 font-mono text-[12px] tracking-[0.14em] uppercase">
+            {menuItems.map((item, index) => {
+              const isActive = index === activeIndex;
+              return (
+                <button
+                  key={index}
+                  onClick={() => {
+                    setActiveIndex(index);
+                    scrollToSection(item.id);
+                  }}
+                  className={`relative pb-1 transition-colors duration-200 ${
+                    isActive ? "text-bone" : "text-bone-dim hover:text-bone"
+                  }`}
+                >
+                  {item.label}
+                  <span
+                    className={`absolute left-0 -bottom-0.5 h-[2px] bg-cinnabar transition-all duration-300 ${
+                      isActive ? "w-full" : "w-0"
+                    }`}
+                  />
+                </button>
+              );
+            })}
+          </nav>
+
+          {/* Right controls (desktop) */}
+          <div className="hidden md:flex items-center gap-3 ml-auto">
+            <button
+              onClick={() => setLanguage(language === "PT-BR" ? "ENG" : "PT-BR")}
+              className="font-mono text-[12px] tracking-[0.1em] text-bone-dim hover:text-cinnabar border border-bone-dim/30 hover:border-cinnabar px-3 py-1.5 transition-colors"
+            >
+              [{language}]
+            </button>
+            <a
+              href={pdfFile}
+              download={language === "ENG" ? "Andrew-Doni-Resume.pdf" : "Curriculo-Andrew-Doni.pdf"}
+              className="font-mono text-[12px] tracking-[0.1em] text-ink bg-bone hover:bg-cinnabar hover:text-bone px-3 py-1.5 transition-colors"
+            >
+              PDF
+            </a>
           </div>
-        </button>
 
-      </GlassSurface>
+          {/* Mobile controls */}
+          <div className="flex md:hidden items-center gap-2 ml-auto">
+            <button
+              onClick={() => setLanguage(language === "PT-BR" ? "ENG" : "PT-BR")}
+              className="font-mono text-[11px] text-bone-dim border border-bone-dim/30 px-2 py-1.5"
+            >
+              [{language}]
+            </button>
+            <button
+              onClick={() => setMenuOpen(!menuOpen)}
+              className="p-2 border border-bone-dim/30"
+              aria-label="Menu"
+            >
+              <div className="space-y-1">
+                <span className="block w-5 h-[1.5px] bg-bone"></span>
+                <span className="block w-5 h-[1.5px] bg-bone"></span>
+                <span className="block w-5 h-[1.5px] bg-bone"></span>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
 
-      {/* ------------------- MOBILE DROPDOWN ------------------- */}
+      {/* Mobile dropdown */}
       {menuOpen && (
-        <div className="
-          absolute top-[85px] w-[80%] 
-          bg-black/40 backdrop-blur-xl border border-white/20
-          rounded-2xl py-4 px-6 flex flex-col space-y-4 md:hidden
-          animate-fadeIn
-        ">
+        <div className="md:hidden bg-malachite-deep border-b border-bone-dim/20 px-5 py-5 flex flex-col gap-4">
           {menuItems.map((item, index) => (
             <button
               key={index}
@@ -188,12 +162,18 @@ export default function Navbar() {
                 setMenuOpen(false);
                 scrollToSection(item.id);
               }}
-              className="text-white text-lg font-medium"
+              className="font-mono text-sm tracking-[0.1em] uppercase text-bone text-left"
             >
               {item.label}
             </button>
           ))}
-
+          <a
+            href={pdfFile}
+            download={language === "ENG" ? "Andrew-Doni-Resume.pdf" : "Curriculo-Andrew-Doni.pdf"}
+            className="font-mono text-sm text-ink bg-bone px-3 py-2 w-fit"
+          >
+            PDF
+          </a>
         </div>
       )}
     </div>

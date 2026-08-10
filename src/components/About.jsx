@@ -1,7 +1,7 @@
 
-import TiltedCard from './TiltedCard';
-import photo from '../assets/20260214_205724(1).jpg'
+import photo from '../assets/andrew.png'
 import { useT } from './useT.js'
+import { ShelfDivider } from './Shelf.jsx';
 
 export default function About() {
   const t = useT();
@@ -9,49 +9,43 @@ export default function About() {
   return (
     <section
       id="sobre-mim"
-      className="w-full pb-[20vh] text-white flex flex-col items-center relative"
+      className="w-full pb-24 text-bone flex flex-col items-center relative px-5 md:px-8"
     >
-          <h2 className="text-4xl font-bold text-white mb-20">
-            {t("nav_about")}
-          </h2>
+      <div className="max-w-6xl w-full mb-14">
+        <ShelfDivider label={t("nav_about")} />
+      </div>
 
-      <div className="max-w-6xl px-6 flex flex-col md:flex-row items-center gap-12">
-        
-        {/* Texto */}
-        <div className="flex-1 text-center md:text-left">
-          <h3 className="text-3xl font-bold mb-6">{t("about_who_am_i")}</h3>
-          <p className="text-base text-white leading-relaxed mb-6">
-            {t("about_paragraph1")} <b>{t("about_paragraph1_1b")}</b>
+      <div className="max-w-6xl w-full grid md:grid-cols-[0.85fr_1.15fr] gap-12 md:gap-16 items-start">
+
+        {/* Photo, set as a mounted specimen rather than a hover-tilt card */}
+        <div className="flex flex-col items-center md:items-start gap-3">
+          <div className="joinery bg-malachite-mid p-2 w-full max-w-[320px]">
+            <img
+              src={photo}
+              alt="Andrew Doni"
+              className="w-full aspect-square object-cover grayscale-[0.15] contrast-[1.05]"
+            />
+          </div>
+          <span className="font-mono text-[10px] tracking-[0.16em] uppercase text-bone-dim">
+            Andrew Doni
+          </span>
+        </div>
+
+        {/* Text */}
+        <div>
+          <h3 className="font-display text-3xl md:text-4xl text-bone mb-7">{t("about_who_am_i")}</h3>
+          <p className="text-[17px] text-bone-dim leading-[1.8] max-w-[68ch]">
+            {t("about_paragraph1")} <b className="text-bone font-normal">{t("about_paragraph1_1b")}</b>
             {t("about_paragraph1_2")}
-            <br />
-            {t("about_paragraph2")}<b>{t("about_paragraph2_1b")}</b>{t("about_paragraph2_2")}
-            <br />
-            {t("about_paragraph3")}<b>{t("about_paragraph3_1b")}</b>{t("about_paragraph3_2")}<b>{t("about_paragraph3_2b")}</b>{t("about_paragraph3_3")}
-            <br />
+            <br /><br />
+            {t("about_paragraph2")}<b className="text-bone font-normal">{t("about_paragraph2_1b")}</b>{t("about_paragraph2_2")}
+            <br /><br />
+            {t("about_paragraph3")}<b className="text-bone font-normal">{t("about_paragraph3_1b")}</b>{t("about_paragraph3_2")}<b className="text-bone font-normal">{t("about_paragraph3_2b")}</b>{t("about_paragraph3_3")}
+            <br /><br />
             {t("about_paragraph4")}
           </p>
         </div>
-
-        {/* Foto com Tilt */}
-        <div className="flex-1 flex justify-center">
-          <TiltedCard
-            imageSrc={photo}
-            altText="Andrew Doni"
-            captionText="Andrew Doni"
-            containerHeight="300px"
-            containerWidth="300px"
-            imageHeight="300px"
-            imageWidth="300px"
-            rotateAmplitude={12}
-            scaleOnHover={1.1}
-            showMobileWarning={false}
-            showTooltip={false}
-            displayOverlayContent={false}
-          />
-        </div>
       </div>
-
-
     </section>
   );
 }

@@ -8,55 +8,38 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'sf-pro': ['"SF Pro"', 'sans-serif'], // ✅ adicionado SF Pro
-      },
-      borderRadius: {
-        lg: 'var(--radius)',
-        md: 'calc(var(--radius) - 2px)',
-        sm: 'calc(var(--radius) - 4px)'
+        display: ['"Petrona"', 'Georgia', 'serif'],
+        serif: ['"Petrona"', 'Georgia', 'serif'],
+        mono: ['"Fragment Mono"', 'ui-monospace', 'monospace'],
       },
       colors: {
-        background: 'hsl(var(--background))',
-        foreground: 'hsl(var(--foreground))',
-        card: {
-          DEFAULT: 'hsl(var(--card))',
-          foreground: 'hsl(var(--card-foreground))'
+        malachite: {
+          DEFAULT: '#12271f',
+          mid: '#1f3a2e',
+          deep: '#081911',
         },
-        popover: {
-          DEFAULT: 'hsl(var(--popover))',
-          foreground: 'hsl(var(--popover-foreground))'
+        jade: {
+          DEFAULT: '#7fae9b',
+          deep: '#2f5c46',
         },
-        primary: {
-          DEFAULT: 'hsl(var(--primary))',
-          foreground: 'hsl(var(--primary-foreground))'
+        cinnabar: {
+          DEFAULT: '#c4463a',
+          deep: '#9c342b',
         },
-        secondary: {
-          DEFAULT: 'hsl(var(--secondary))',
-          foreground: 'hsl(var(--secondary-foreground))'
+        bone: {
+          DEFAULT: '#f3e9d6',
+          dim: '#cbbfa4',
         },
-        muted: {
-          DEFAULT: 'hsl(var(--muted))',
-          foreground: 'hsl(var(--muted-foreground))'
+        celadon: '#d9e3d6',
+        terra: '#e2a08c',
+        ink: {
+          DEFAULT: '#0a140f',
+          dim: '#3f5449',
         },
-        accent: {
-          DEFAULT: 'hsl(var(--accent))',
-          foreground: 'hsl(var(--accent-foreground))'
-        },
-        destructive: {
-          DEFAULT: 'hsl(var(--destructive))',
-          foreground: 'hsl(var(--destructive-foreground))'
-        },
-        border: 'hsl(var(--border))',
-        input: 'hsl(var(--input))',
-        ring: 'hsl(var(--ring))',
-        chart: {
-          '1': 'hsl(var(--chart-1))',
-          '2': 'hsl(var(--chart-2))',
-          '3': 'hsl(var(--chart-3))',
-          '4': 'hsl(var(--chart-4))',
-          '5': 'hsl(var(--chart-5))'
-        }
-      }
+      },
+      borderRadius: {
+        none: '0px',
+      },
     }
   },
   plugins: [require("tailwindcss-animate")],
